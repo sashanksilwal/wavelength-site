@@ -23,7 +23,7 @@ if (dataTag) {
     top_blocker: insightLine(summary.top_barriers?.[0]),
     top_factor: insightLine(summary.top_match_factors?.[0]),
     top_activity: insightLine(summary.top_activities?.[0]),
-    try_top2: summary.try_top2_pct ? `${summary.try_top2_pct}% said: likely to try` : "",
+    try_top2: "Grouped as not likely (1-2), on the fence (3), and likely (4-5).",
   };
 
   document.querySelectorAll("[data-insight]").forEach((el) => {
@@ -90,13 +90,13 @@ if (dataTag) {
       chart.destroy();
     };
 
-    const prepCanvas = (canvas) => {
-      canvas.width = 620;
-      canvas.height = 320;
+    const prepCanvas = (canvas, width = 620, height = 320) => {
+      canvas.width = width;
+      canvas.height = height;
     };
 
-    const createChart = (canvas, config) => {
-      prepCanvas(canvas);
+    const createChart = (canvas, config, size = {}) => {
+      prepCanvas(canvas, size.width, size.height);
       const chart = new Chart(canvas, config);
       requestAnimationFrame(() => freezeChart(chart));
     };
@@ -222,15 +222,68 @@ if (dataTag) {
       });
     };
 
+    const buildLikelihoodPie = (id, counts) => {
+      const ctx = document.getElementById(id);
+      if (!ctx) return;
+
+      const labels = ["Not likely (1-2)", "On the fence (3)", "Likely (4-5)"];
+      const values = [counts.notLikely, counts.neutral, counts.likely];
+      createChart(
+        ctx,
+        {
+          type: "pie",
+          data: {
+            labels,
+            datasets: [
+              {
+                data: values,
+                backgroundColor: [palette.navy, palette.gold, palette.coral],
+                borderColor: "#ffffff",
+                borderWidth: 4,
+              },
+            ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                display: true,
+                position: "bottom",
+                labels: {
+                  usePointStyle: true,
+                  pointStyle: "circle",
+                  boxWidth: 12,
+                  padding: 18,
+                  font: { size: 13, weight: "600" },
+                },
+              },
+              tooltip: {
+                callbacks: {
+                  label: (context) => {
+                    const value = Number(context.raw) || 0;
+                    return `${context.label}: ${value} responses`;
+                  },
+                },
+              },
+              solidBackground: { color: "#ffffff" },
+            },
+          },
+        },
+        { width: 620, height: 360 }
+      );
+    };
+
     buildBarPercent("chart-barriers", summary.top_barriers, true, palette.teal);
     buildBarPercent("chart-factors", summary.top_match_factors, true, palette.sage);
     buildBarPercent("chart-activities", summary.top_activities, true, palette.coral);
 
-    const tryItems = Object.keys(summary.try_distribution).map((key) => ({
-      label: `Score ${key}`,
-      value: summary.try_distribution[key],
-    }));
+    const tryDistribution = summary.try_distribution || {};
+    const likelihoodGroups = {
+      notLikely: (tryDistribution["1"] || 0) + (tryDistribution["2"] || 0),
+      neutral: tryDistribution["3"] || 0,
+      likely: (tryDistribution["4"] || 0) + (tryDistribution["5"] || 0),
+    };
 
-    buildBarCounts("chart-likelihood", tryItems, palette.gold);
+    buildLikelihoodPie("chart-likelihood", likelihoodGroups);
   }
 }
