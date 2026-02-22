@@ -200,7 +200,7 @@ p {
 .hero-actions {
   display: flex;
   gap: 1rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin: 1.3rem 0 1rem;
 }
 
