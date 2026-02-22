@@ -1,0 +1,407 @@
+{
+  "n": 73,
+  "hangout_monthly_or_more_pct": 83.6,
+  "mood_mismatch_yes_pct": 71.2,
+  "lonely_3plus_pct": 65.8,
+  "try_top2_pct": 42.5,
+  "year_distribution": [
+    {
+      "label": "Freshmen",
+      "count": 18,
+      "pct": 24.7
+    },
+    {
+      "label": "Sophomore",
+      "count": 24,
+      "pct": 32.9
+    },
+    {
+      "label": "Junior",
+      "count": 9,
+      "pct": 12.3
+    },
+    {
+      "label": "Senior",
+      "count": 4,
+      "pct": 5.5
+    },
+    {
+      "label": "Graduate Student",
+      "count": 18,
+      "pct": 24.7
+    }
+  ],
+  "close_friends_distribution": [
+    {
+      "label": "O - I mostly keep to myself",
+      "count": 9,
+      "pct": 12.3
+    },
+    {
+      "label": "1-2",
+      "count": 29,
+      "pct": 39.7
+    },
+    {
+      "label": "3-5",
+      "count": 24,
+      "pct": 32.9
+    },
+    {
+      "label": "6+",
+      "count": 11,
+      "pct": 15.1
+    }
+  ],
+  "hangout_frequency": [
+    {
+      "label": "Almost everyday",
+      "count": 6,
+      "pct": 8.2
+    },
+    {
+      "label": "A few times a week",
+      "count": 28,
+      "pct": 38.4
+    },
+    {
+      "label": "A few times a month",
+      "count": 27,
+      "pct": 37.0
+    },
+    {
+      "label": "Rarely",
+      "count": 10,
+      "pct": 13.7
+    },
+    {
+      "label": "Never",
+      "count": 2,
+      "pct": 2.7
+    }
+  ],
+  "mood_mismatch_distribution": [
+    {
+      "label": "Yes, this happens often",
+      "count": 20,
+      "pct": 27.4
+    },
+    {
+      "label": "Yes, occasionally",
+      "count": 32,
+      "pct": 43.8
+    },
+    {
+      "label": "Rarely",
+      "count": 14,
+      "pct": 19.2
+    },
+    {
+      "label": "No, never",
+      "count": 7,
+      "pct": 9.6
+    }
+  ],
+  "loneliness_scale": [
+    {
+      "label": "1",
+      "count": 3,
+      "pct": 4.1
+    },
+    {
+      "label": "2",
+      "count": 22,
+      "pct": 30.1
+    },
+    {
+      "label": "3",
+      "count": 25,
+      "pct": 34.2
+    },
+    {
+      "label": "4",
+      "count": 19,
+      "pct": 26.0
+    },
+    {
+      "label": "5",
+      "count": 4,
+      "pct": 5.5
+    }
+  ],
+  "top_barriers": [
+    {
+      "label": "Friends are busy or unavailable",
+      "count": 46,
+      "pct": 63.0
+    },
+    {
+      "label": "Too tired to coordinate/ Text around",
+      "count": 34,
+      "pct": 46.6
+    },
+    {
+      "label": "I'd rather be alone (just don't feel like it)",
+      "count": 26,
+      "pct": 35.6
+    },
+    {
+      "label": "Don't know who would be down for what I want to do",
+      "count": 25,
+      "pct": 34.2
+    },
+    {
+      "label": "Feels awkward to reach out",
+      "count": 23,
+      "pct": 31.5
+    },
+    {
+      "label": "Don't want to bother my friends",
+      "count": 21,
+      "pct": 28.8
+    }
+  ],
+  "top_match_factors": [
+    {
+      "label": "They have a similar energy/mood",
+      "count": 55,
+      "pct": 75.3
+    },
+    {
+      "label": "They have similar interests/hobbies",
+      "count": 48,
+      "pct": 65.8
+    },
+    {
+      "label": "They want to do the same activity as me",
+      "count": 46,
+      "pct": 63.0
+    },
+    {
+      "label": "They're nearby/ convenient to meet",
+      "count": 35,
+      "pct": 47.9
+    },
+    {
+      "label": "They're the same age",
+      "count": 13,
+      "pct": 17.8
+    },
+    {
+      "label": "They're the same gender",
+      "count": 7,
+      "pct": 9.6
+    }
+  ],
+  "top_activities": [
+    {
+      "label": "Get food / coffee",
+      "count": 47,
+      "pct": 64.4
+    },
+    {
+      "label": "Study together",
+      "count": 46,
+      "pct": 63.0
+    },
+    {
+      "label": "Play games (board games, video games, etc)",
+      "count": 43,
+      "pct": 58.9
+    },
+    {
+      "label": "Just chill/ hang out",
+      "count": 40,
+      "pct": 54.8
+    },
+    {
+      "label": "Explore campus / neighborhood/city",
+      "count": 38,
+      "pct": 52.1
+    },
+    {
+      "label": "Work out / exercise",
+      "count": 35,
+      "pct": 47.9
+    }
+  ],
+  "expiring_comfort": [
+    {
+      "label": "Maybe, depending on the situation",
+      "count": 27,
+      "pct": 37.0
+    },
+    {
+      "label": "Yes, if there were safety features (verification, ratings, etc.)",
+      "count": 23,
+      "pct": 31.5
+    },
+    {
+      "label": "Yes, totally comfortable",
+      "count": 17,
+      "pct": 23.3
+    },
+    {
+      "label": "Probably not",
+      "count": 5,
+      "pct": 6.8
+    },
+    {
+      "label": "Definitely not",
+      "count": 1,
+      "pct": 1.4
+    }
+  ],
+  "ai_match_comfort": [
+    {
+      "label": "1",
+      "count": 8,
+      "pct": 11.0
+    },
+    {
+      "label": "2",
+      "count": 15,
+      "pct": 20.5
+    },
+    {
+      "label": "3",
+      "count": 24,
+      "pct": 32.9
+    },
+    {
+      "label": "4",
+      "count": 18,
+      "pct": 24.7
+    },
+    {
+      "label": "5",
+      "count": 8,
+      "pct": 11.0
+    }
+  ],
+  "ai_chat_sentiment": [
+    {
+      "label": "Helpful but I\u2019d want to turn it off if I don\u2019t need it",
+      "count": 30,
+      "pct": 41.1
+    },
+    {
+      "label": "Prefer no AI in the chat, let it be organic",
+      "count": 15,
+      "pct": 20.5
+    },
+    {
+      "label": "Actively dislike this idea",
+      "count": 12,
+      "pct": 16.4
+    },
+    {
+      "label": "Neutral",
+      "count": 12,
+      "pct": 16.4
+    },
+    {
+      "label": "Great idea! Would make it less awkward",
+      "count": 4,
+      "pct": 5.5
+    }
+  ],
+  "ai_trust": [
+    {
+      "label": "1",
+      "count": 11,
+      "pct": 15.1
+    },
+    {
+      "label": "2",
+      "count": 16,
+      "pct": 21.9
+    },
+    {
+      "label": "3",
+      "count": 32,
+      "pct": 43.8
+    },
+    {
+      "label": "4",
+      "count": 13,
+      "pct": 17.8
+    },
+    {
+      "label": "5",
+      "count": 1,
+      "pct": 1.4
+    }
+  ],
+  "usage_times": [
+    {
+      "label": "When my usual friends are busy",
+      "count": 42,
+      "pct": 57.5
+    },
+    {
+      "label": "Weekends",
+      "count": 41,
+      "pct": 56.2
+    },
+    {
+      "label": "When I\u2019m feeling down or lonely",
+      "count": 40,
+      "pct": 54.8
+    },
+    {
+      "label": "Evenings / after dinner",
+      "count": 35,
+      "pct": 47.9
+    },
+    {
+      "label": "During study breaks",
+      "count": 21,
+      "pct": 28.8
+    },
+    {
+      "label": "Between classes",
+      "count": 17,
+      "pct": 23.3
+    }
+  ],
+  "top_concerns": [
+    {
+      "label": "It might feel awkward in person",
+      "count": 49,
+      "pct": 67.1
+    },
+    {
+      "label": "Safety / meeting strangers",
+      "count": 46,
+      "pct": 63.0
+    },
+    {
+      "label": "Not enough people using it on my campus",
+      "count": 32,
+      "pct": 43.8
+    },
+    {
+      "label": "Privacy concerns",
+      "count": 22,
+      "pct": 30.1
+    },
+    {
+      "label": "I don\u2019t think I\u2019d actually go through with meeting up",
+      "count": 14,
+      "pct": 19.2
+    },
+    {
+      "label": "No major concerns",
+      "count": 6,
+      "pct": 8.2
+    }
+  ],
+  "try_distribution": {
+    "1": 4,
+    "2": 11,
+    "3": 27,
+    "4": 21,
+    "5": 10
+  }
+}
