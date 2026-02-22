@@ -228,12 +228,54 @@ if (dataTag) {
 
       const labels = ["Unlikely", "Open to trying (3)", "Highly Likely (4-5)"];
       const values = [counts.notLikely, counts.neutral, counts.likely];
+      const total = values.reduce((sum, value) => sum + value, 0);
+      const labelsWithPct = labels.map((label, index) => {
+        const pct = total ? ((values[index] / total) * 100).toFixed(1) : "0.0";
+        return `${label} (${pct}%)`;
+      });
+      const piePercentLabels = {
+        id: "piePercentLabels",
+        afterDatasetsDraw: (chart) => {
+          const dataset = chart.data.datasets[0];
+          const data = dataset.data || [];
+          const meta = chart.getDatasetMeta(0);
+          const pieTotal = data.reduce((sum, value) => sum + Number(value || 0), 0);
+          if (!pieTotal) return;
+
+          const { ctx } = chart;
+          ctx.save();
+          ctx.font = "700 13px Sora, system-ui, sans-serif";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+
+          meta.data.forEach((slice, index) => {
+            const value = Number(data[index] || 0);
+            if (!value) return;
+            const pct = Math.round((value / pieTotal) * 100);
+            const textColor = index === 1 ? "#1b1c23" : "#ffffff";
+            const props = slice.getProps(
+              ["x", "y", "startAngle", "endAngle", "innerRadius", "outerRadius"],
+              true
+            );
+            const angle = (props.startAngle + props.endAngle) / 2;
+            const radius = props.innerRadius + (props.outerRadius - props.innerRadius) * 0.62;
+            const x = props.x + Math.cos(angle) * radius;
+            const y = props.y + Math.sin(angle) * radius;
+            ctx.fillStyle = textColor;
+            ctx.fillText(`${pct}%`, x, y);
+          });
+
+          ctx.restore();
+        },
+      };
+
       createChart(
         ctx,
         {
           type: "pie",
+          plugins: [piePercentLabels],
           data: {
-            labels,
+            labels: labelsWithPct,
             datasets: [
               {
                 data: values,
