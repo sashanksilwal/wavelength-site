@@ -516,7 +516,8 @@ p {
 .ai-title {
   margin: 0;
   font-weight: 700;
-  color: #1b1c23;
+  color: var(--accent-50);
+  font-size: 1.05rem;
 }
 
 .ai-body {
