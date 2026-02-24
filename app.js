@@ -358,6 +358,6 @@ if (updatesForm) {
         .join("\n")
     );
 
-    window.location.href = `mailto:wavelength.buzz.admin@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:wavelength.buzz@gmail.com?subject=${subject}&body=${body}`;
   });
 }
